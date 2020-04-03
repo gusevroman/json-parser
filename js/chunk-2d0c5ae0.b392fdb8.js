@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0c5ae0"],{"3fb9":function(r,e,n){"use strict";n.r(e);var t=function(){var r=this,e=r.$createElement,n=r._self._c||e;return n("div",{staticClass:"error"},[r._v("You've got Server Error")])},o=[],a={name:"Error"},c=a,s=n("2877"),u=Object(s["a"])(c,t,o,!1,null,null,null);e["default"]=u.exports}}]);
+//# sourceMappingURL=chunk-2d0c5ae0.b392fdb8.js.map
