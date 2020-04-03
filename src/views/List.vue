@@ -48,24 +48,24 @@
 
 //     е) Добавить строки в таблицу с данными из массива "Data".
 
-<template {{json.PageTemplate}}>
+<template>
   <div>
-    <title>{{json.PageTitle}}</title>
+    <SimplePage />
+    
     <h1>{{H1Content}}</h1>
     <h2>{{TableName}}</h2>
 
-       <table class="responsive-table">
-        <thead>
-              <th v-for="data in ColsTitles">{{data}}</th>
-          </tr>
-        </thead>
+    <table class="responsive-table">
+      <thead>
+        <th v-for="data in ColsTitles">{{data}}</th>
+      </thead>
 
-        <tbody>
-          <tr v-for="row in Data">
-            <td v-for="rowData in row">{{rowData}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <tbody>
+        <tr v-for="row in Data">
+          <td v-for="rowData in row">{{rowData}}</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
 
@@ -79,11 +79,15 @@ export default {
     H1Content: json.H1Content,
     TableName: json.TableName,
     ColsTitles: json.ColsTitles,
-    Data: json.Data,
+    Data: json.Data
   }),
-  components: {}
+  components: {
+    SimplePage: () => import("@/components/templates/SimplePage.vue")
+  },
+  mounted: () => {
+    document.title = json.PageTitle;
+  }
 };
-
 </script>
 
 <style lang="scss" scoped>
